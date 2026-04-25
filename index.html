@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adidas Home</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: url('https://www.transparenttextures.com/patterns/green-fibers.png');
+  background-color:#0f3d2e;
+  color:#fff;
+}
+
+/* NAVBAR SAME */
+.nav-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 40px;
+  background:#0a2b20;
+}
+.logo{font-size:22px;font-weight:bold;}
+.nav-top a{
+  margin-left:20px;
+  color:#fff;
+  text-decoration:none;
+}
+.active{background:#2ecc71;padding:5px 10px;border-radius:4px;}
+
+.nav-bottom{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 40px;
+  background:#134d3a;
+}
+.nav-bottom ul{display:flex;list-style:none;}
+.nav-bottom li{margin-right:20px;}
+.nav-bottom a{color:#fff;text-decoration:none;}
+.search input{padding:5px;}
+
+.main-bar{
+  background:#2ecc71;
+  padding:10px 40px;
+}
+.main-bar h1{display:inline;}
+.main-bar span{
+  float:right;
+  background:#fff;
+  color:#000;
+  padding:5px 20px;
+}
+
+/* HERO */
+.hero{
+  padding:220px 40px;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url('https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg') center/cover;
+}
+.hero h1{font-size:30px;}
+
+/* SLIDER */
+.slider{
+  display:flex;
+  align-items:center;
+  justify-content:left;
+  gap:10px;
+  margin:30px;
+}
+.slider-container{
+  display:flex;
+  gap:15px;
+}
+.card{width:120px;background:#1b5e47;}
+.card img{width:100%;}
+
+/* ===== NEW SECTION (NEWS + EVENTS) ===== */
+.section{
+  display:flex;
+  align-items:flex-start;
+  padding:40px;
+  gap:20px;
+}
+
+/* NEWS GRID */
+.news{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+  width:45%;
+}
+.news-card{
+  background:#1b5e47;
+}
+.news-card img{width:100%;}
+.news-card h4{padding:10px;}
+.news-card button{
+  width:100%;
+  background:#2ecc71;
+  border:none;
+  padding:10px;
+}
+
+/* EVENTS RIGHT SIDE */
+.events{
+  width:250px;
+  background:#2ecc71;
+  padding:15px;
+}
+.events div{
+  background:#fff;
+  color:#000;
+  margin:5px 0;
+  padding:5px;
+}
+
+/* BANNER */
+.banner{
+  display:flex;
+  margin:40px;
+  gap:35px;
+  align-items: left;
+}
+.banner img{width:20%;}
+.banner-text{
+  width:20%;
+  background:#2ecc71;
+  color:#000;
+  padding:20px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+  padding:40px;
+}
+.form{
+  max-width:500px;
+  margin:auto;
+}
+.form input, textarea{
+  width:100%;
+  margin:10px 0;
+  padding:10px;
+}
+button{
+  background:#2ecc71;
+  border:none;
+  padding:10px 20px;
+}
+
+/* FOOTER */
+footer{
+  background:#0a2b20;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
+footer .links{
+  margin-bottom:10px;
+}
+footer a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+}
+/* ================= MOBILE ================= */
+@media (max-width: 768px){
+
+  .nav-top, .nav-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .nav-bottom ul{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .nav-bottom li{
+    margin:10px 0;
+  }
+
+  .main-bar span{
+    float:none;
+    display:block;
+    margin-top:10px;
+  }
+
+  .hero{
+    padding:100px 20px;
+  }
+
+  .slider{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .slider-container{
+    flex-wrap:wrap;
+  }
+
+  .section{
+    flex-direction:column;
+  }
+
+  .news{
+    grid-template-columns:1fr; /* 1 column */
+    width:100%;
+  }
+
+  .events{
+    width:100%;
+  }
+
+  .banner{
+    flex-direction:column;
+  }
+
+  .banner img, .banner-text{
+    width:100%;
+  }
+
+  .form{
+    width:100%;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 769px) and (max-width: 1024px){
+
+  .nav-bottom ul{
+    flex-wrap:wrap;
+  }
+
+  .hero{
+    padding:150px 30px;
+  }
+
+  .section{
+    flex-direction:column;
+  }
+
+  .news{
+    grid-template-columns:repeat(2, 1fr); /* 2 columns */
+    width:100%;
+  }
+
+  .events{
+    width:100%;
+  }
+
+  .banner{
+    flex-direction:column;
+  }
+
+  .banner img, .banner-text{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV 1 -->
+<div class="nav-top">
+  <div class="logo">adidas</div>
+  <div>
+    <a href="#" class="active">MEMBERSHIP</a>
+    <a href="#">ACCOUNT</a>
+  </div>
+</div>
+
+<!-- NAV 2 -->
+<div class="nav-bottom">
+  <ul>
+    <li><a href="#" class="active">OUR TRACKS</a></li>
+    <li><a href="#">FIND EVENTS</a></li>
+    <li><a href="#">TRACK MAP</a></li>
+    <li><a href="#">SHOP</a></li>
+    <li><a href="#">ABOUT US</a></li>
+  </ul>
+  <div class="search">
+    <input type="text" placeholder="Search">
+  </div>
+</div>
+
+<!-- MAIN BAR -->
+<div class="main-bar">
+  <h1>HOME PAGE</h1>
+  <span>Reebok</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>GET READY FOR NEW ADIDAS BANDS</h1>
+  <br>
+  <p>Adidas tracks all beagins with a starting gate and end with a finish line,but</p>
+  <p>everything in between varies from track to track.Beacuse no two tracks are alike, </p>
+  <p>this action soprts keeps you on your toes whereever you are racing</p>
+</div>
+
+<!-- SLIDER -->
+<div class="slider">
+  <div><</div>
+  <div class="slider-container">
+    <div class="card"><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg"></div>
+    <div class="card"><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg"></div>
+    <div class="card"><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg"></div>
+    <div class="card"><img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg"></div>
+  </div>
+  <div>></div>
+  <br><br>
+</div>
+ <p>______________________________________________________________________</p>
+
+<!-- ===== UPDATED SECTION ===== -->
+<div class="section">
+
+  <!-- NEWS -->
+  <div class="news">
+    <div class="news-card">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg">
+      <h4>2019 NATIONAL CHAMPIONS CROWNED AT REEBOK</h4>
+      <button>READ MORE</button>
+    </div>
+    <div class="news-card">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg">
+      <h4>2019 NATIONAL CHAMPIONS</h4>
+      <button>READ MORE</button>
+    </div>
+    <div class="news-card">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg">
+      <h4>2019 NATIONAL CHAMPIONS CROWNED AT REEBOK</h4>
+      <button>READ MORE</button>
+    </div>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="events">
+    <h4>EVENTS</h4>
+    <div>1 Show in USA</div>
+    <div>2 Adidas Show</div>
+    <div>3 Adidas Event</div>
+    <div>4 Adidas USA</div>
+  </div>
+
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg">
+  <div class="banner-text">
+    <h3>2019 NATIONAL CHAMPIONS CROWNED AT REEBOK</h3>
+    <p>Joining ADIDAS means you an race at your local track.</p>
+  </div>
+  <br><br>
+  <br><br>
+  <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,q_auto,fl_lossy,c_fill,g_auto/dfeaac2e2d8f46558e76af7f010bafe5_9366/Ultraboost_Light_Shoes_Black_HQ6339_01_standard.jpg">
+  <div class="banner-text">
+    <h3>2019 NATIONAL CHAMPIONS CROWNED AT REEBOK</h3>
+    <p>Joining ADIDAS means you an race at your local track.</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+  <h2>GET IN TOUCH</h2>
+  <div class="form">
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <input placeholder="Country">
+    <input placeholder="State">
+    <input placeholder="Gender">
+    <textarea placeholder="Message"></textarea>
+    <button>SUBMIT</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="links">
+    <a href="#">OUR TRACKS</a> |
+    <a href="#">FIND EVENTS</a> |
+    <a href="#">TRACK MAP</a> |
+    <a href="#">SHOP</a> |
+    <a href="#">ABOUT US</a>
+  </div>
+  <p>© 2026 Adidas</p>
+</footer>
+
+</body>
+</html>
